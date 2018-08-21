@@ -2,7 +2,7 @@ import { FETCH_STORIES, CREATE_SEARCH } from '../actions/types';
 
 let initialState = {
     items: [],
-    item: {}
+    searchQuery: {}
 }
 
 export default function(state = initialState, action) {
@@ -18,7 +18,7 @@ export default function(state = initialState, action) {
                 ...state,
                 item: action.payload,
             }
-        default:
+            default:
             return state;
     }
 }
